@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    catalog:
+      serviceId: cloud-config-client-po
+      path: /catalog/*
+      stripPrefix: false
+    greeting:
+      serviceId: cloud-config-client-pc
+      path: /pc/*
+      stripPrefix: false

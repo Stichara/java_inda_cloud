@@ -1,0 +1,24 @@
+# bootstrap file for using of config server
+server:
+  port: 0
+
+spring:
+  application:
+    name: cloud-config-client-po
+
+  #  profiles:
+  #    active: po
+
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server
+      #      uri: http://localhost:8888
+      fail-fast: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka
+#  instance:
+#    preferIpAddress: true
